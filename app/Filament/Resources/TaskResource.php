@@ -81,7 +81,9 @@ class TaskResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('description')->html(),
+                Tables\Columns\TextColumn::make('payment_status'),
             ])
             ->filters([
                 //
